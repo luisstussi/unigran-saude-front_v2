@@ -1,11 +1,12 @@
-.FundoLogin{
+.backgroundLogin{
     width: 100%;
     height: 100%;
     display: grid;
     grid-template-columns: 40% auto;
     overflow: hidden;
+    position: absolute;
 
-    .textoFormLogin{
+    .formLogin{
         width: fit-content;
         height: fit-content;
         margin: auto;
@@ -22,7 +23,7 @@
             color: #868686;
             text-align: center;
         }
-        .textoForm{
+        .form{
             display: grid;
             grid-gap: 30px;
             padding: 10px;
@@ -37,7 +38,7 @@
             div{
                 display: flex;
 
-                .btnSeeSenha{
+                .btnSeePassword{
                     margin-left: -30px;
                     img{
                         width: 20px;
@@ -47,7 +48,7 @@
                 }
             }
 
-            .btnResetSenha{
+            .btnResetPassword{
                 width: fit-content;
                 color: #5D5F60;
                 margin: -10px 0 0 auto;
@@ -64,7 +65,7 @@
         }
     }
 
-    .DecoracaoDeFundo{
+    .backgroundDecoration{
         background-color: #F1F3F4;
         display: grid;
         grid-template-rows: repeat(3, min-content),;
@@ -82,7 +83,7 @@
             margin: 15px 0 0 0;
         }
 
-        #spanShowEtp{
+        .showEtp{
             width: fit-content;
             display: grid;
             grid-template-columns: repeat(3, auto);
@@ -100,7 +101,7 @@
             }
         }
 
-        .versoesImagem{
+        .flexImages{
             height: fit-content;
             display: flex;
             grid-gap: 30px;
