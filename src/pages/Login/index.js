@@ -1,16 +1,11 @@
 import { useState } from 'react';
 import './index.scss';
+import CarouselImg from '../../components/Carousel';
 
 export default function Login() {
 
+    //função para exibir ou ocultar a senha
     const [showPassword, setShowPassword] = useState('password')
-
-    // {showPassword === 'text' ?
-    //     setShowPassword('text')
-    //     :
-    //     setShowPassword('password')
-    // }
-
     function seePassword() {
         if (showPassword === 'password') {
             setShowPassword('text')
@@ -41,13 +36,8 @@ export default function Login() {
                 </span>
             </span>
 
-            <span className='backgroundDecoration'>
-
-                <span className='showEtp'>
-                </span>
-
-                <div className='flexImages'>
-                </div>
+            <span className='backgroundCarousel'>
+                <CarouselImg/>
             </span>
         </div>
     )
