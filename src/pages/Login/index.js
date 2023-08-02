@@ -37,7 +37,7 @@ export default function Login() {
             </span>
 
             <span className='backgroundCarousel'>
-                <CarouselImg/>
+                <CarouselImg />
             </span>
         </div>
     )

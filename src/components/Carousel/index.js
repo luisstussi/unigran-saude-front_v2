@@ -1,11 +1,14 @@
 import Carousel from 'react-bootstrap/Carousel';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+//Carrosel de imagem + legenda da tela de login
+
 function CarouselImg() {
   return (
     <span className='backgroundDecoration'>
     <Carousel data-bs-theme="dark">
       <Carousel.Item >
+      <br/><br/>
         <h2>Realize e acompanhe os agendamentos de usuários</h2>
         <h6>Receba os pacientes e agende seus atendimentos de forma facilitada , visualizando informações e modificando, quando necessário</h6>
         <br/><br/><br/><br/>
@@ -16,6 +19,7 @@ function CarouselImg() {
         />
       </Carousel.Item>
       <Carousel.Item >
+      <br/><br/>
         <h2>Realize e acompanhe os agendamentos de usuários 2</h2>
         <h6>Receba os pacientes e agende seus atendimentos de forma facilitada , visualizando informações e modificando, quando necessário 2</h6>
         <br/><br/><br/><br/>
@@ -26,6 +30,7 @@ function CarouselImg() {
         />
       </Carousel.Item>
       <Carousel.Item >
+      <br/><br/>
         <h2>Realize e acompanhe os agendamentos de usuários 3</h2>
         <h6>Receba os pacientes e agende seus atendimentos de forma facilitada , visualizando informações e modificando, quando necessário 3</h6>
         <br/><br/><br/><br/>
