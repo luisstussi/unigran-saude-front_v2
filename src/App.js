@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import Routes from './routes';
 
 import Login from './pages/Login';
 import MenuLeft from './components/MenuLeft';
@@ -8,8 +9,8 @@ import MenuLeft from './components/MenuLeft';
 
 function App() {
   return (
-    <div className="App">
-      <MenuLeft/>
+    <div>
+      <Routes />
     </div>
   );
 }
