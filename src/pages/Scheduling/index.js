@@ -1,8 +1,16 @@
 import React from "react";
+import MenuLeft from "../../components/MenuLeft";
+import Header from "../../ReapeatedElements/Header";
+
+
 
 function Scheduling() {
     return(
-        <h1>Página Agendamentos</h1>
+        <div>
+            <MenuLeft />
+            <Header />
+        </div>
+        
     );
 }
 
