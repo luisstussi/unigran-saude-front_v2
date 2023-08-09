@@ -1,18 +1,20 @@
 import styled from "styled-components";
 import { useParams, } from "react-router-dom";
+import { useState } from 'react';
 
-import "./index.scss";
+import "./styled.scss";
 
 export default function MenuLeft() {
     const params = useParams();
 
+
+//estilização dos itens da lista do menu lateral
     const Li = styled.li`
     display: flex;
     grid-gap: 18px;
     align-items: center;
     padding: 10px 10px 10px 20px;
     border-radius: 9px;
-
     background-color: ${(props) =>
             params.title === props.className ? "#343434" : "transparent"};
 
@@ -22,9 +24,17 @@ export default function MenuLeft() {
     }
   `;
 
+//função para alternar entre tema claro e escuro
+const [dark, setDark] = useState(true)
+const theme = {
+    background: dark ? "#1e1e1e" : "white",
+}
+
     return (
-        <section className="divBackgroundMenuLeft">
-            <i />
+        <section style={theme} className="divBackgroundMenuLeft">
+            <i>
+            <img className="logoMenuLeft" src={dark ? "/static/media/logoDark.484e7300203ed1a3e7e9.png" : "/static/media/logoWhite.610c2c2e6ff4227977d3.png"}/>
+            </i> 
 
             <div>
                 <div className="divMenu">
@@ -112,6 +122,7 @@ export default function MenuLeft() {
                             <button
                                 id="btnChangeTheme"
                                 className="menuLeftButton hoveractive"
+                                onClick={() => {setDark(old => !old)}}
                             >
                                 <img
                                     width={"25px"}
@@ -119,7 +130,7 @@ export default function MenuLeft() {
                                     src="https://img.icons8.com/fluency-systems-regular/144/ffffff/sun--v1.png"
                                     alt="Ícone de um sol, sem cor de fundo, apenas bordas brancas"
                                 />
-                                <p>Modo Claro</p>
+                                <p>Mudar Tema</p>
                             </button>
                         </li>
                     </ul>
