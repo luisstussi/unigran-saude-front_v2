@@ -1,47 +1,34 @@
 import styled from "styled-components";
 import { useParams, } from "react-router-dom";
 import { useState } from 'react';
+import LogoDark from '../../imgs/LogoDark.png';
+import LogoWhite from '../../imgs/LogoWhite.png';
 
 import "./styled.scss";
 
 export default function MenuLeft() {
     const params = useParams();
 
-
-//estilização dos itens da lista do menu lateral
-    const Li = styled.li`
-    display: flex;
-    grid-gap: 18px;
-    align-items: center;
-    padding: 10px 10px 10px 20px;
-    border-radius: 9px;
-    background-color: ${(props) =>
-            params.title === props.className ? "#343434" : "transparent"};
-
-    &:hover {
-      background-color: ${(props) =>
-            params.title === props.className ? "#343434" : "#3434344a"};
-    }
-  `;
-
 //função para alternar entre tema claro e escuro
 const [dark, setDark] = useState(true)
 const theme = {
-    background: dark ? "#1e1e1e" : "white",
+    background: dark ? "#1e1e1e" : "black",
+    color: dark ? "#a5a5a5" : "white",
 }
 
     return (
+        <div className="backgroundFull" style={{background: dark ? "#ffffff" : "#1e1e1e"}}>
         <section style={theme} className="divBackgroundMenuLeft">
             <i>
-            <img className="logoMenuLeft" src={dark ? "/static/media/logoDark.484e7300203ed1a3e7e9.png" : "/static/media/logoWhite.610c2c2e6ff4227977d3.png"}/>
+            <img className="logoMenuLeft" src={dark ? LogoWhite : LogoDark}/>
             </i> 
 
             <div>
                 <div className="divMenu">
-                    <h1>Menu</h1>
+                    <h1 style={theme}>Menu</h1>
 
                     <ul>
-                        <Li className="scheduling">
+                        <span className="scheduling list">
                             <img
                                 width={"25px"}
                                 height={"25px"}
@@ -49,9 +36,9 @@ const theme = {
                                 alt="Ícone de um calendário, sem cor de fundo, que possui três pontos na coluna superior e dois pontos na coluna inferior. Apenas bordas brancas"
                             />
                             <p>Agendamentos</p>
-                        </Li>
+                        </span>
                         <div className="divLiWithOptions">
-                            <Li className="working">
+                            <span className="working list">
                                 <img
                                     width={"25px"}
                                     height={"25px"}
@@ -59,7 +46,7 @@ const theme = {
                                     alt="Ícone de um usuário, sem cor de fundo, apenas bordas brancas"
                                 />
                                 <p>Funcionários</p>
-                            </Li>
+                            </span>
                             <li
                                 style={{
                                     opacity: `${params.title === "working"
@@ -91,7 +78,7 @@ const theme = {
                             </li>
                         </div>
 
-                        <Li className="clients">
+                        <span className="clients list">
                             <img
                                 width={"25px"}
                                 height={"25px"}
@@ -99,9 +86,9 @@ const theme = {
                                 alt="Ícone de três usuários lateralmente, sem cor de fundo, apenas bordas brancas"
                             />
                             <p>Clientes</p>
-                        </Li>
-                        <Li
-                            className="departments"
+                        </span>
+                        <span
+                            className="departments list"
 
                         >
                             <img
@@ -111,7 +98,7 @@ const theme = {
                                 alt="Ícone de uma árvore de estrutura, sem cor de fundo, apenas bordas brancas"
                             />
                             <p>Departamentos</p>
-                        </Li>
+                        </span>
                     </ul>
                 </div>
 
@@ -139,7 +126,7 @@ const theme = {
 
             <div className="divMoreOptions">
                 <ul>
-                    <Li className="config">
+                    <span className="config list">
                         <img
                             width={"25px"}
                             height={"25px"}
@@ -147,8 +134,8 @@ const theme = {
                             alt="Ícone de uma engrenagem, sem cor de fundo, apenas bordas brancas"
                         />
                         <p>Configurações</p>
-                    </Li>
-                    <Li className="profile">
+                    </span>
+                    <span className="profile list">
                         <img
                             width={"25px"}
                             height={"25px"}
@@ -156,7 +143,7 @@ const theme = {
                             alt="Ícone de uma engrenagem, sem cor de fundo, apenas bordas brancas"
                         />
                         <p>Perfil</p>
-                    </Li>
+                    </span>
                 </ul>
                 <button
                     id="btnExit"
@@ -172,5 +159,6 @@ const theme = {
                 </button>
             </div>
         </section>
+        </div>
     );
 }
