@@ -1,6 +1,6 @@
 import React from "react";
 
-function Clients() {
+function AllWorking() {
     return(
         <div>
             hello
@@ -8,4 +8,6 @@ function Clients() {
     );
 }
 
-export default Clients;
+
+
+export default AllWorking;
