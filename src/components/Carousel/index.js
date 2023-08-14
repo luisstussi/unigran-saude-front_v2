@@ -1,5 +1,8 @@
 import Carousel from 'react-bootstrap/Carousel';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import CarrouselImg01 from '../../imgs/Carrousel_01.png'
+import CarrouselImg02 from '../../imgs/Carrousel_02.png'
+import CarrouselImg03 from '../../imgs/Carrousel_03.png'
 
 //Carrosel de imagem + legenda da tela de login
 
@@ -14,7 +17,7 @@ function CarouselImg() {
           <br /><br /><br /><br />
           <img
             className="d-block w-100"
-            src="https://www.unigran.br/dourados//imagens/galeria/6ef68295d29bb23a2cbf08ebc4f325bcm.jpg"
+            src={CarrouselImg01}
             alt="..."
           />
         </Carousel.Item>
@@ -25,7 +28,7 @@ function CarouselImg() {
           <br /><br /><br /><br />
           <img
             className="d-block w-100"
-            src="https://www.unigran.br/dourados//imagens/galeria/0a13f8f6ef1290d3108d903dd793785bm.jpg"
+            src={CarrouselImg02}
             alt="..."
           />
         </Carousel.Item>
@@ -36,7 +39,7 @@ function CarouselImg() {
           <br /><br /><br /><br />
           <img
             className="d-block w-100"
-            src="https://www.unigran.br/dourados//imagens/galeria/246a83d20e96bb1a33b6330475045ac5m.jpg"
+            src={CarrouselImg03}
             alt="..."
           />
         </Carousel.Item>
