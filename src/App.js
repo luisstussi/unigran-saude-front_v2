@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Rotas from './Routes/routes';
+import Rotas from './Routes';
 
 
 
